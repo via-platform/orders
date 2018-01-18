@@ -1,0 +1,58 @@
+@import "variables";
+@import "ui-variables";
+
+.orders
+{
+    background: @pane-content-background-color;
+    display: flex;
+    flex-direction: column;
+
+    .thead
+    {
+        display: flex;
+        border-bottom: 1px solid @pane-border-color;
+        background: @pane-background-color;
+
+        .td
+        {
+            line-height: 24px;
+            border-right: 1px solid @pane-border-color;
+            flex: 1;
+            font-size: 11px;
+            color: @text-color-subtle;
+            padding: 0 10px;
+
+            &:last-child
+            {
+                border-right: 0;
+            }
+        }
+    }
+
+    .orders-list
+    {
+        flex: 1;
+        overflow: auto;
+    }
+
+    .via-table
+    {
+        .tr
+        {
+            display: flex;
+
+            &:nth-child(even)
+            {
+                background: lighten(@pane-content-background-color, 3%);
+            }
+
+            .td
+            {
+                flex: 1;
+                font-size: 11px;
+                padding: 0 10px;
+                line-height: 24px;
+            }
+        }
+    }
+}
