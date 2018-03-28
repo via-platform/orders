@@ -1,24 +1,41 @@
 {
-  "name": "orders",
-  "version": "0.2.3",
-  "description": "Monitor open orders.",
-  "main": "./lib/main",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "via",
-    "orders"
-  ],
-  "repository": "https://github.com/via-platform/orders",
-  "author": "Dakota Gordon",
-  "engines": {
-    "via": "^0.5.7-alpha"
-  },
-  "dependencies": {
-    "etch": "0.9.0",
-    "moment": "^2.20.1",
-    "via-table": "0.2.0"
-  },
-  "providedServices": {}
+    "name": "orders",
+    "version": "0.2.3",
+    "description": "Monitor open orders.",
+    "main": "./lib/main",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "via",
+        "orders"
+    ],
+    "repository": "https://github.com/via-platform/orders",
+    "author": "Dakota Gordon",
+    "engines": {
+        "via": "^0.5.7-alpha"
+    },
+    "dependencies": {
+        "etch": "0.9.0",
+        "moment": "^2.20.1",
+        "via-table": "0.2.0"
+    },
+    "providedServices": {},
+    "configSchema": {
+        "hideCanceledOrders": {
+            "type": "boolean",
+            "default": true,
+            "description": "Hide orders that have been canceled."
+        },
+        "hideCompletedOrders": {
+            "type": "boolean",
+            "default": true,
+            "description": "Hide orders that have been filled."
+        },
+        "hidePendingOrders": {
+            "type": "boolean",
+            "default": false,
+            "description": "Hide orders that have not been transmitted to the exchange."
+        }
+    }
 }
