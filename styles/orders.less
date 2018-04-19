@@ -4,8 +4,6 @@
 .orders
 {
     background: @pane-background-color;
-    display: flex;
-    flex-direction: column;
 
     .thead
     {
@@ -33,14 +31,12 @@
         }
     }
 
-    .orders-list
-    {
-        flex: 1;
-        overflow: auto;
-    }
-
     .via-table
     {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
         .tr
         {
             display: flex;
@@ -62,6 +58,12 @@
                     flex: 3;
                 }
             }
+        }
+
+        .tbody
+        {
+            flex: 1;
+            overflow: auto;
         }
     }
 }
