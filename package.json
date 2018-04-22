@@ -20,6 +20,9 @@
     "moment": "^2.20.1",
     "via-table": "^0.2.0"
   },
+  "deserializers": {
+    "Orders": "deserialize"
+  },
   "providedServices": {},
   "configSchema": {
     "hideCanceledOrders": {
