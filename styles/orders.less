@@ -85,3 +85,28 @@
         }
     }
 }
+
+.orders-status
+{
+    display: flex;
+    align-items: center;
+    background-size: 12px auto;
+    background-repeat: no-repeat;
+    font-weight: 700;
+    color: @primary-color;
+
+    .orders-status-icon
+    {
+        display: block;
+        margin-right: 6px;
+        width: 16px;
+        height: 16px;
+        background: url('via://orders/images/orders-blue.svg') -5px 1px no-repeat;
+        background-size: 26px auto;
+    }
+
+    &:hover
+    {
+        color: @primary-color;
+    }
+}
